@@ -120,6 +120,12 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAdminMenu.Designer.vb">
+      <DependentUpon>frmAdminMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCate.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
       <DependentUpon>frmLoadMember.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLoadMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrintPerchase.Designer.vb">
@@ -199,6 +211,12 @@
     <Compile Include="frmSalse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmUserMenu.Designer.vb">
+      <DependentUpon>frmUserMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
@@ -246,11 +264,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminMenu.resx">
+      <DependentUpon>frmAdminMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCate.resx">
       <DependentUpon>frmCate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoadMember.resx">
       <DependentUpon>frmLoadMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPart.resx">
       <DependentUpon>frmPart.vb</DependentUpon>
@@ -284,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalse.resx">
       <DependentUpon>frmSalse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserMenu.resx">
+      <DependentUpon>frmUserMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
