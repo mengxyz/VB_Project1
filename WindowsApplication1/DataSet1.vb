@@ -1,4 +1,15 @@
 ﻿Partial Class DataSet1
+    Partial Class BookDataTable
+
+        Private Sub BookDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging
+            If (e.Column.ColumnName = Me.B_CostColumn.ColumnName) Then
+                'Add user code here
+            End If
+
+        End Sub
+
+    End Class
+
     Partial Class Book1DataTable
 
         Private Sub Book1DataTable_Book1RowChanging(sender As Object, e As Book1RowChangeEvent) Handles Me.Book1RowChanging
