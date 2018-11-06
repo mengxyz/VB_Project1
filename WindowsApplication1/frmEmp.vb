@@ -19,7 +19,6 @@ Public Class frmEmp
         sql = "SELECT E_Username,E_Name,E_status FROM Employee"
         Module1.Connect()
         Dim ds As New DataSet
-        da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Emp")
         dgvEmp.ReadOnly = True
         dgvEmp.DataSource = ds.Tables("Emp")

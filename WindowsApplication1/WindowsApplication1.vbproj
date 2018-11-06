@@ -76,6 +76,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrEmp.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrEmp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ctrBook.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,17 +132,17 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdminMenu.Designer.vb">
-      <DependentUpon>frmAdminMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmAdminMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmCate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCate.Designer.vb">
       <DependentUpon>frmCate.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoadMember.Designer.vb">
@@ -223,10 +229,10 @@
     <Compile Include="frmUserMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.vb">
-      <DependentUpon>Menu.vb</DependentUpon>
+    <Compile Include="frmAdminMenu.Designer.vb">
+      <DependentUpon>frmAdminMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu.vb">
+    <Compile Include="frmAdminMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -253,6 +259,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ctrEmp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrEmp.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrBook.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ctrBook.vb</LastGenOutput>
@@ -280,11 +290,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminMenu.resx">
-      <DependentUpon>frmAdminMenu.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCate.resx">
       <DependentUpon>frmCate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoadMember.resx">
       <DependentUpon>frmLoadMember.vb</DependentUpon>
@@ -328,8 +338,8 @@
     <EmbeddedResource Include="frmUserMenu.resx">
       <DependentUpon>frmUserMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.vb</DependentUpon>
+    <EmbeddedResource Include="frmAdminMenu.resx">
+      <DependentUpon>frmAdminMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
