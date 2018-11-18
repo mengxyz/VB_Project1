@@ -28,4 +28,16 @@ Public Class frmLogin
             frmUserMenu.Show()
         End If
     End Sub
+
+    Private Sub frmLogin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        If Asc(e.KeyChar) = Keys.Enter Then
+            btnOk.PerformClick()
+        End If
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Asc(e.KeyChar) = Keys.Enter Then
+            btnOk.PerformClick()
+        End If
+    End Sub
 End Class

@@ -6,9 +6,8 @@ Public Class frmPurchase
         Dim sql As String
         Dim da As SqlDataAdapter
         Dim ds As New DataSet
-
         Module1.Connect()
-        sql = "SELECT E_Username, E_Name From Employee"
+        sql = "SELECT E_Username, E_Name From Employee where E_Username = '" & User_Na & "'"
 
         da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Employee")

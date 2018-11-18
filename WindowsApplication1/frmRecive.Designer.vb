@@ -184,7 +184,7 @@ Partial Class frmRecieve
         Me.btnSave.Text = "รับสินค้า"
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'frmRecive
+        'frmRecieve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -197,7 +197,7 @@ Partial Class frmRecieve
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancle)
         Me.Controls.Add(Me.btnSave)
-        Me.Name = "frmRecive"
+        Me.Name = "frmRecieve"
         Me.Text = "frmRecive"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

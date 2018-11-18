@@ -98,13 +98,13 @@ Public Class frmMember
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim sql As String
+        Dim Sql As String
         Dim key_Gen As String = ""
         Module1.Connect()
         Dim sqlDr As SqlDataReader
         Dim sqlCmd As SqlCommand
-        sql = "SELECT MAX (M_ID) FROM Member"
-        sqlCmd = New SqlCommand(sql, Conn)
+        Sql = "SELECT MAX (M_ID) FROM Member"
+        sqlCmd = New SqlCommand(Sql, Conn)
         sqlDr = sqlCmd.ExecuteReader
         If sqlDr.Read() Then
             If sqlDr.IsDBNull(0) Then
@@ -112,9 +112,9 @@ Public Class frmMember
             Else
                 key_Gen = sqlDr.Item(0)
                 key_Gen = Trim(key_Gen)
-                key_Gen = Strings.Right(key_Gen, 4)
+                key_Gen = Strings.Right(key_Gen, 3)
                 key_Gen = CInt(key_Gen) + 1
-                key_Gen = Strings.Right(("00" & key_Gen), 4)
+                key_Gen = Strings.Right(("00" & key_Gen), 3)
                 key_Gen = "M" & key_Gen
             End If
         End If

@@ -9,7 +9,7 @@ Public Class frmRecieve
 
         dtReceive.Text = Today.Date
         Module1.Connect()
-        sql = "SELECT E_Username,E_Name FROM Employee"
+        sql = "SELECT E_Username,E_Name FROM Employee where E_Username = '" & User_Na & "'"
 
         da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Employee")
@@ -25,8 +25,8 @@ Public Class frmRecieve
         txtEmp.Enabled = False
         dgvDetail.Enabled = False
         btnSave.Enabled = False
-        btnCancle.Enabled = True
-        btnExit.Enabled = False
+        btnCancle.Enabled = False
+        btnExit.Enabled = True
         ShowData()
     End Sub
 
@@ -53,6 +53,7 @@ Public Class frmRecieve
         dgvPurchase.Columns(3).DefaultCellStyle.Format = "dd MMM yyyy"
         dgvPurchase.Columns(3).Width = 120
 
+
     End Sub
 
     Private Sub dgvPurchase_CellContentDoubleClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPurchase.CellContentDoubleClick
@@ -64,7 +65,7 @@ Public Class frmRecieve
         txtEmp.Text = dgvPurchase.Rows(e.RowIndex).Cells(2).Value
         'ไปเลือกรายการในใบสั่งซื้อที่เลือกมาแสดง'
         sql = " SELECT B.B_ISBN,B.B_Na,B.B_Cost,B.B_Price,p.P_Num "
-        sql &= " FROM Book b, Perchase_Detail p WHERE b.B_ISBN = p.B_ISBN "
+        sql &= " FROM Book b, Purchase_Detail p WHERE b.B_ISBN = p.B_ISBN "
         sql &= " AND p.P_ID = '" & txtPurchaseID.Text & "' "
         da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Detail")
@@ -116,7 +117,7 @@ Public Class frmRecieve
         Dim bookID As String
         Dim i, k, amount As Integer
 
-        sql = "INSERT INTO Recieve (R_Date, P_ID, E_Username) "
+        sql = "INSERT INTO Recive (R_Date, P_ID, E_Username) "
         sql &= "VALUES ('" & dtReceive.Value.ToString("s") & "' ,'" & txtPurchaseID.Text & "','" & cmbEmp.SelectedValue & "' ) "
         sqlcmd = New SqlCommand(sql, Conn)
         sqlcmd.ExecuteNonQuery() 'ประมวลคำสั่ง SQL
@@ -146,10 +147,14 @@ Public Class frmRecieve
         txtEmp.Enabled = False
         dgvDetail.Enabled = False
         btnSave.Enabled = False
-        btnCancle.Enabled = True
+        btnCancle.Enabled = False
         btnExit.Enabled = True
         ds.Tables("Purchase").Clear() 'ลบข้อมูลใน Table Purchase ที่อยู่ใน Dataset
         ds.Tables("Detail").Clear() 'ลบข้อมูลใน Table Dataset ที่อยู่ใน Dataset
         ShowData()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 End Class

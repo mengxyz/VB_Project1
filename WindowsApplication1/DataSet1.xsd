@@ -120,6 +120,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Book2" msprop:Generator_TableClassName="Book2DataTable" msprop:Generator_TableVarName="tableBook2" msprop:Generator_TablePropName="Book2" msprop:Generator_RowDeletingName="Book2RowDeleting" msprop:Generator_RowChangingName="Book2RowChanging" msprop:Generator_RowEvHandlerName="Book2RowChangeEventHandler" msprop:Generator_RowDeletedName="Book2RowDeleted" msprop:Generator_UserTableName="Book2" msprop:Generator_RowChangedName="Book2RowChanged" msprop:Generator_RowEvArgName="Book2RowChangeEvent" msprop:Generator_RowClassName="Book2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="B_ISBN" msdata:Caption="M_ID" msprop:Generator_ColumnVarNameInTable="columnB_ISBN" msprop:Generator_ColumnPropNameInRow="B_ISBN" msprop:Generator_ColumnPropNameInTable="B_ISBNColumn" msprop:Generator_UserColumnName="B_ISBN" type="xs:string" minOccurs="0" />
+              <xs:element name="B_Na" msprop:Generator_ColumnVarNameInTable="columnB_Na" msprop:Generator_ColumnPropNameInRow="B_Na" msprop:Generator_ColumnPropNameInTable="B_NaColumn" msprop:Generator_UserColumnName="B_Na" type="xs:string" minOccurs="0" />
+              <xs:element name="B_Point" msprop:Generator_ColumnVarNameInTable="columnB_Point" msprop:Generator_ColumnPropNameInRow="B_Point" msprop:Generator_ColumnPropNameInTable="B_PointColumn" msprop:Generator_UserColumnName="B_Point" type="xs:string" minOccurs="0" />
+              <xs:element name="B_Amount" msprop:Generator_ColumnVarNameInTable="columnB_Amount" msprop:Generator_ColumnPropNameInRow="B_Amount" msprop:Generator_ColumnPropNameInTable="B_AmountColumn" msprop:Generator_UserColumnName="B_Amount" type="xs:string" minOccurs="0" />
+              <xs:element name="B_Cost" msprop:Generator_ColumnVarNameInTable="columnB_Cost" msprop:Generator_ColumnPropNameInRow="B_Cost" msprop:Generator_ColumnPropNameInTable="B_CostColumn" msprop:Generator_UserColumnName="B_Cost" type="xs:string" minOccurs="0" />
+              <xs:element name="C_Na" msdata:Caption="Pa_Na" msprop:Generator_ColumnVarNameInTable="columnC_Na" msprop:Generator_ColumnPropNameInRow="C_Na" msprop:Generator_ColumnPropNameInTable="C_NaColumn" msprop:Generator_UserColumnName="C_Na" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

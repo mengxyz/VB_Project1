@@ -16,9 +16,14 @@ Public Class frmEmp
     Sub showData()
         Dim sql As String
         Dim da As SqlDataAdapter
-        sql = "SELECT E_Username,E_Name,E_status FROM Employee"
+        If Ed = "0" Then
+            sql = "SELECT E_Username,E_Name,E_status FROM Employee where E_Username = '" & User_Na & "'"
+        Else
+            sql = "SELECT E_Username,E_Name,E_status FROM Employee"
+        End If
         Module1.Connect()
         Dim ds As New DataSet
+        da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Emp")
         dgvEmp.ReadOnly = True
         dgvEmp.DataSource = ds.Tables("Emp")
@@ -59,7 +64,6 @@ Public Class frmEmp
         End If
         sqlDr.Close()
         txtUser.Text = key_Gen
-        txtAdd.Enabled = True
         txtNa.Enabled = True
         txtPass.Enabled = True
         txtTel.Enabled = True
@@ -82,7 +86,11 @@ Public Class frmEmp
         txtTel.Enabled = False
         txtAdd.Enabled = False
         txtUser.Enabled = False
-        btnAdd.Enabled = True
+        If Ed = "0" Then
+            btnAdd.Enabled = False
+        Else
+            btnAdd.Enabled = True
+        End If
         btnEdit.Enabled = False
         btnDelete.Enabled = False
         btnSave.Enabled = False
@@ -101,7 +109,11 @@ Public Class frmEmp
         txtTel.Enabled = False
         txtAdd.Enabled = False
         txtUser.Enabled = False
-        btnAdd.Enabled = True
+        If Ed = "0" Then
+            btnAdd.Enabled = False
+        Else
+            btnAdd.Enabled = True
+        End If
         btnEdit.Enabled = False
         btnDelete.Enabled = False
         btnSave.Enabled = False

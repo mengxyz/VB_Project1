@@ -23,4 +23,8 @@ Public Class frmPrintPerchase
         currentReport.SetDataSource(TbCtr)
         ctrv2.ReportSource = currentReport
     End Sub
+
+    Private Sub ctrv2_Load(sender As Object, e As EventArgs) Handles ctrv2.Load
+
+    End Sub
 End Class

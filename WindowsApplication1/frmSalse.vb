@@ -6,6 +6,8 @@ Public Class frmSalse
     Public j, h, amount As Integer
     Sub clear()
         'lblSum.Text = ""
+        'txtMemNa.Text = ""
+        'txtMemID.Text = ""
         txtAmount.Text = ""
         txtBookID.Text = ""
         txtBookNa.Text = ""
@@ -39,7 +41,7 @@ Public Class frmSalse
         Dim ds As New DataSet
         Module1.Connect()
 
-        sql = "SELECT E_Username, E_Name From Employee"
+        sql = "SELECT E_Username, E_Name From Employee where E_Username = '" & User_Na & "'"
 
         da = New SqlDataAdapter(sql, Conn)
         da.Fill(ds, "Employee")
@@ -114,7 +116,7 @@ Public Class frmSalse
     Private Sub btnCancle_Click(sender As Object, e As EventArgs) Handles btnCancle.Click
         clear()
         txtNum.Enabled = False
-        btAdd.Enabled = False
+        btAdd.Enabled = True
         btRemove.Enabled = False
         cmbEmp.Enabled = False
         dtSale.Enabled = False
@@ -125,18 +127,23 @@ Public Class frmSalse
         Dim Gid, Gname As String
         Dim Gnum, Gamount As Integer
         Dim Gprice, Gtotal As Double
+        If txtNum.Text = "" Then
+            MessageBox.Show("กรุณาใส่จำนวนที่สั่งซื้อ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
         If CInt(amount) < CInt(txtNum.Text) Then
             MessageBox.Show("จำนวนที่ซื้อมากกว่าจำนวนคงเหลือ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
-        If txtNum.Text = "" Then
-            MessageBox.Show("กรุณาใส่จำนวนที่สั่งซื้อ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        If txtMemID.Text = "" Then
+            MessageBox.Show("กรุณาเลือกลูกค้า", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
         Gamount = CInt(txtAmount.Text)
         Gid = txtBookID.Text
         Gname = txtBookNa.Text
-        GPrice = CDbl(txtPrice.Text)
+        Gprice = CDbl(txtPrice.Text)
         Gnum = CInt(txtNum.Text)
         h = Gamount - Gnum
         Gtotal = Gnum * Gprice
@@ -171,7 +178,7 @@ Public Class frmSalse
         Dim i, k, orderID As Integer
         k = dgvSale.RowCount - 2
         If k < 0 Then
-            MessageBox.Show("กรุณาทำรายหารสั่งซื้อ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("กรุณาทำรายการสั่งซื้อ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
         orderDate = Today.Date.ToString("s")
@@ -206,4 +213,15 @@ Public Class frmSalse
         showdata()
     End Sub
 
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        If txtID.Text = "" Then
+            MessageBox.Show("กรูณาทำรายการก่อน", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+        frmPrintSale.Show()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
 End Class
