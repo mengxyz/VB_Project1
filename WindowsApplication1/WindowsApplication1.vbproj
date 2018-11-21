@@ -76,6 +76,24 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrReportMonth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrReportMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ctrReportNetYear.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrReportNetYear.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ctrReportPurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrReportPurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ctrBookCate.vb">
       <DependentUpon>ctrBookCate.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -124,10 +142,22 @@
       <DependentUpon>ctrMember.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ctrReportRecive.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrReportRecive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ctrSale.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ctrSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ctrSaleDay.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrSaleDay.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSet1.Designer.vb">
@@ -241,6 +271,30 @@
     <Compile Include="frmReportMember.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportNetYear.Designer.vb">
+      <DependentUpon>frmReportNetYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportNetYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPurchase.Designer.vb">
+      <DependentUpon>frmReportPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportSaleDay.Designer.vb">
+      <DependentUpon>frmReportSaleDay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSaleDay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportSaleMonth.Designer.vb">
+      <DependentUpon>frmReportSaleMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSaleMonth.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSalse.Designer.vb">
       <DependentUpon>frmSalse.vb</DependentUpon>
     </Compile>
@@ -287,8 +341,26 @@
     <Compile Include="reportBookCate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="reportResive.Designer.vb">
+      <DependentUpon>reportResive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportResive.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ctrReportMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrReportMonth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrReportNetYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrReportNetYear.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrReportPurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrReportPurchase.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrBookCate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ctrBookCate.vb</LastGenOutput>
@@ -321,9 +393,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ctrMember.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrReportRecive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrReportRecive.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrSale.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ctrSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrSaleDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrSaleDay.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -376,6 +456,18 @@
     <EmbeddedResource Include="frmReportMember.resx">
       <DependentUpon>frmReportMember.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportNetYear.resx">
+      <DependentUpon>frmReportNetYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPurchase.resx">
+      <DependentUpon>frmReportPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSaleDay.resx">
+      <DependentUpon>frmReportSaleDay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSaleMonth.resx">
+      <DependentUpon>frmReportSaleMonth.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSalse.resx">
       <DependentUpon>frmSalse.vb</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +488,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportBookCate.resx">
       <DependentUpon>reportBookCate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportResive.resx">
+      <DependentUpon>reportResive.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

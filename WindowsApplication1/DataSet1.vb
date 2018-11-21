@@ -1,4 +1,12 @@
 ﻿Partial Class DataSet1
+    Partial Class ReciveDataTable
+
+        Private Sub ReciveDataTable_ReciveRowChanging(sender As Object, e As ReciveRowChangeEvent) Handles Me.ReciveRowChanging
+
+        End Sub
+
+    End Class
+
     Partial Class BookDataTable
 
         Private Sub BookDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging

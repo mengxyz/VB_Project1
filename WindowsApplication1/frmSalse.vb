@@ -224,4 +224,20 @@ Public Class frmSalse
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
+    Private Sub txtNum_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNum.KeyUp
+
+    End Sub
+
+    Private Sub txtNum_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNum.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57
+                e.Handled = False
+            Case 8, 13, 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นตัวเลข")
+        End Select
+    End Sub
 End Class

@@ -55,26 +55,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SaleDate" msprop:Generator_TableClassName="SaleDateDataTable" msprop:Generator_TableVarName="tableSaleDate" msprop:Generator_TablePropName="SaleDate" msprop:Generator_RowDeletingName="SaleDateRowDeleting" msprop:Generator_RowChangingName="SaleDateRowChanging" msprop:Generator_RowEvHandlerName="SaleDateRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleDateRowDeleted" msprop:Generator_UserTableName="SaleDate" msprop:Generator_RowChangedName="SaleDateRowChanged" msprop:Generator_RowEvArgName="SaleDateRowChangeEvent" msprop:Generator_RowClassName="SaleDateRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="S_Date" msprop:Generator_ColumnVarNameInTable="columnS_Date" msprop:Generator_ColumnPropNameInRow="S_Date" msprop:Generator_ColumnPropNameInTable="S_DateColumn" msprop:Generator_UserColumnName="S_Date" type="xs:string" minOccurs="0" />
-              <xs:element name="S_ID" msprop:Generator_ColumnVarNameInTable="columnS_ID" msprop:Generator_ColumnPropNameInRow="S_ID" msprop:Generator_ColumnPropNameInTable="S_IDColumn" msprop:Generator_UserColumnName="S_ID" type="xs:string" minOccurs="0" />
-              <xs:element name="S_Net" msprop:Generator_ColumnVarNameInTable="columnS_Net" msprop:Generator_ColumnPropNameInRow="S_Net" msprop:Generator_ColumnPropNameInTable="S_NetColumn" msprop:Generator_UserColumnName="S_Net" type="xs:string" minOccurs="0" />
-              <xs:element name="E_Name" msprop:Generator_ColumnVarNameInTable="columnE_Name" msprop:Generator_ColumnPropNameInRow="E_Name" msprop:Generator_ColumnPropNameInTable="E_NameColumn" msprop:Generator_UserColumnName="E_Name" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="SaleMonthYear" msprop:Generator_TableClassName="SaleMonthYearDataTable" msprop:Generator_TableVarName="tableSaleMonthYear" msprop:Generator_TablePropName="SaleMonthYear" msprop:Generator_RowDeletingName="SaleMonthYearRowDeleting" msprop:Generator_RowChangingName="SaleMonthYearRowChanging" msprop:Generator_RowEvHandlerName="SaleMonthYearRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleMonthYearRowDeleted" msprop:Generator_UserTableName="SaleMonthYear" msprop:Generator_RowChangedName="SaleMonthYearRowChanged" msprop:Generator_RowEvArgName="SaleMonthYearRowChangeEvent" msprop:Generator_RowClassName="SaleMonthYearRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="dd" msprop:Generator_ColumnVarNameInTable="columndd" msprop:Generator_ColumnPropNameInRow="dd" msprop:Generator_ColumnPropNameInTable="ddColumn" msprop:Generator_UserColumnName="dd" type="xs:string" minOccurs="0" />
-              <xs:element name="mm" msprop:Generator_ColumnVarNameInTable="columnmm" msprop:Generator_ColumnPropNameInRow="mm" msprop:Generator_ColumnPropNameInTable="mmColumn" msprop:Generator_UserColumnName="mm" type="xs:string" minOccurs="0" />
-              <xs:element name="m_Name" msprop:Generator_ColumnVarNameInTable="columnm_Name" msprop:Generator_ColumnPropNameInRow="m_Name" msprop:Generator_ColumnPropNameInTable="m_NameColumn" msprop:Generator_UserColumnName="m_Name" type="xs:string" minOccurs="0" />
-              <xs:element name="dd_Net" msprop:Generator_ColumnVarNameInTable="columndd_Net" msprop:Generator_ColumnPropNameInRow="dd_Net" msprop:Generator_ColumnPropNameInTable="dd_NetColumn" msprop:Generator_UserColumnName="dd_Net" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Sale" msprop:Generator_TableClassName="SaleDataTable" msprop:Generator_TableVarName="tableSale" msprop:Generator_RowChangedName="SaleRowChanged" msprop:Generator_TablePropName="Sale" msprop:Generator_RowDeletingName="SaleRowDeleting" msprop:Generator_RowChangingName="SaleRowChanging" msprop:Generator_RowEvHandlerName="SaleRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleRowDeleted" msprop:Generator_RowClassName="SaleRow" msprop:Generator_UserTableName="Sale" msprop:Generator_RowEvArgName="SaleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
@@ -129,6 +109,39 @@
               <xs:element name="B_Amount" msprop:Generator_ColumnVarNameInTable="columnB_Amount" msprop:Generator_ColumnPropNameInRow="B_Amount" msprop:Generator_ColumnPropNameInTable="B_AmountColumn" msprop:Generator_UserColumnName="B_Amount" type="xs:string" minOccurs="0" />
               <xs:element name="B_Cost" msprop:Generator_ColumnVarNameInTable="columnB_Cost" msprop:Generator_ColumnPropNameInRow="B_Cost" msprop:Generator_ColumnPropNameInTable="B_CostColumn" msprop:Generator_UserColumnName="B_Cost" type="xs:string" minOccurs="0" />
               <xs:element name="C_Na" msdata:Caption="Pa_Na" msprop:Generator_ColumnVarNameInTable="columnC_Na" msprop:Generator_ColumnPropNameInRow="C_Na" msprop:Generator_ColumnPropNameInTable="C_NaColumn" msprop:Generator_UserColumnName="C_Na" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Recive" msprop:Generator_TableClassName="ReciveDataTable" msprop:Generator_TableVarName="tableRecive" msprop:Generator_TablePropName="Recive" msprop:Generator_RowDeletingName="ReciveRowDeleting" msprop:Generator_RowChangingName="ReciveRowChanging" msprop:Generator_RowEvHandlerName="ReciveRowChangeEventHandler" msprop:Generator_RowDeletedName="ReciveRowDeleted" msprop:Generator_UserTableName="Recive" msprop:Generator_RowChangedName="ReciveRowChanged" msprop:Generator_RowEvArgName="ReciveRowChangeEvent" msprop:Generator_RowClassName="ReciveRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="R_ID" msprop:Generator_ColumnVarNameInTable="columnR_ID" msprop:Generator_ColumnPropNameInRow="R_ID" msprop:Generator_ColumnPropNameInTable="R_IDColumn" msprop:Generator_UserColumnName="R_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="R_Date" msprop:Generator_ColumnVarNameInTable="columnR_Date" msprop:Generator_ColumnPropNameInRow="R_Date" msprop:Generator_ColumnPropNameInTable="R_DateColumn" msprop:Generator_UserColumnName="R_Date" type="xs:string" minOccurs="0" />
+              <xs:element name="P_ID" msprop:Generator_ColumnVarNameInTable="columnP_ID" msprop:Generator_ColumnPropNameInRow="P_ID" msprop:Generator_ColumnPropNameInTable="P_IDColumn" msprop:Generator_UserColumnName="P_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="P_Status" msprop:Generator_ColumnVarNameInTable="columnP_Status" msprop:Generator_ColumnPropNameInRow="P_Status" msprop:Generator_ColumnPropNameInTable="P_StatusColumn" msprop:Generator_UserColumnName="P_Status" type="xs:string" minOccurs="0" />
+              <xs:element name="E_Name" msprop:Generator_ColumnVarNameInTable="columnE_Name" msprop:Generator_ColumnPropNameInRow="E_Name" msprop:Generator_ColumnPropNameInTable="E_NameColumn" msprop:Generator_UserColumnName="E_Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Purchase111" msprop:Generator_TableClassName="Purchase111DataTable" msprop:Generator_TableVarName="tablePurchase111" msprop:Generator_RowChangedName="Purchase111RowChanged" msprop:Generator_TablePropName="Purchase111" msprop:Generator_RowDeletingName="Purchase111RowDeleting" msprop:Generator_RowChangingName="Purchase111RowChanging" msprop:Generator_RowEvHandlerName="Purchase111RowChangeEventHandler" msprop:Generator_RowDeletedName="Purchase111RowDeleted" msprop:Generator_RowClassName="Purchase111Row" msprop:Generator_UserTableName="Purchase111" msprop:Generator_RowEvArgName="Purchase111RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P_ID" msdata:Caption="R_ID" msprop:Generator_ColumnVarNameInTable="columnP_ID" msprop:Generator_ColumnPropNameInRow="P_ID" msprop:Generator_ColumnPropNameInTable="P_IDColumn" msprop:Generator_UserColumnName="P_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="P_Date" msprop:Generator_ColumnVarNameInTable="columnP_Date" msprop:Generator_ColumnPropNameInRow="P_Date" msprop:Generator_ColumnPropNameInTable="P_DateColumn" msprop:Generator_UserColumnName="P_Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Pa_Na" msprop:Generator_ColumnVarNameInTable="columnPa_Na" msprop:Generator_ColumnPropNameInRow="Pa_Na" msprop:Generator_ColumnPropNameInTable="Pa_NaColumn" msprop:Generator_UserColumnName="Pa_Na" type="xs:string" minOccurs="0" />
+              <xs:element name="P_Status" msprop:Generator_ColumnVarNameInTable="columnP_Status" msprop:Generator_ColumnPropNameInRow="P_Status" msprop:Generator_ColumnPropNameInTable="P_StatusColumn" msprop:Generator_UserColumnName="P_Status" type="xs:string" minOccurs="0" />
+              <xs:element name="E_Name" msprop:Generator_ColumnVarNameInTable="columnE_Name" msprop:Generator_ColumnPropNameInRow="E_Name" msprop:Generator_ColumnPropNameInTable="E_NameColumn" msprop:Generator_UserColumnName="E_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="P_Num" msprop:Generator_ColumnVarNameInTable="columnP_Num" msprop:Generator_ColumnPropNameInRow="P_Num" msprop:Generator_ColumnPropNameInTable="P_NumColumn" msprop:Generator_UserColumnName="P_Num" type="xs:string" minOccurs="0" />
+              <xs:element name="P_Total" msprop:Generator_ColumnVarNameInTable="columnP_Total" msprop:Generator_ColumnPropNameInRow="P_Total" msprop:Generator_ColumnPropNameInTable="P_TotalColumn" msprop:Generator_UserColumnName="P_Total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reportYear" msprop:Generator_TableClassName="reportYearDataTable" msprop:Generator_TableVarName="tablereportYear" msprop:Generator_TablePropName="reportYear" msprop:Generator_RowDeletingName="reportYearRowDeleting" msprop:Generator_RowChangingName="reportYearRowChanging" msprop:Generator_RowEvHandlerName="reportYearRowChangeEventHandler" msprop:Generator_RowDeletedName="reportYearRowDeleted" msprop:Generator_UserTableName="reportYear" msprop:Generator_RowChangedName="reportYearRowChanged" msprop:Generator_RowEvArgName="reportYearRowChangeEvent" msprop:Generator_RowClassName="reportYearRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="S_Date" msprop:Generator_ColumnVarNameInTable="columnS_Date" msprop:Generator_ColumnPropNameInRow="S_Date" msprop:Generator_ColumnPropNameInTable="S_DateColumn" msprop:Generator_UserColumnName="S_Date" type="xs:string" minOccurs="0" />
+              <xs:element name="NetYear" msprop:Generator_ColumnVarNameInTable="columnNetYear" msprop:Generator_ColumnPropNameInRow="NetYear" msprop:Generator_ColumnPropNameInTable="NetYearColumn" msprop:Generator_UserColumnName="NetYear" type="xs:string" minOccurs="0" />
+              <xs:element name="Net" msprop:Generator_ColumnVarNameInTable="columnNet" msprop:Generator_ColumnPropNameInRow="Net" msprop:Generator_ColumnPropNameInTable="NetColumn" msprop:Generator_UserColumnName="Net" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

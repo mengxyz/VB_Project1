@@ -97,4 +97,24 @@
     Private Sub รายงานขอมลสนคาทงหมดตามบรษทคคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานขอมลสนคาทงหมดตามบรษทคคาToolStripMenuItem.Click
         frmReportPaBook.Show()
     End Sub
+
+    Private Sub สรปยอดขายสนคาประจำวนToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles สรปยอดขายสนคาประจำวนToolStripMenuItem.Click
+        frmReportSaleDay.Show()
+    End Sub
+
+    Private Sub สรปยอดขายสนคาประจำเดอนToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles สรปยอดขายสนคาประจำเดอนToolStripMenuItem.Click
+        frmReportSaleMonth.Show()
+    End Sub
+
+    Private Sub สรปยอดขายสนคาประจำปToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles สรปยอดขายสนคาประจำปToolStripMenuItem.Click
+        frmReportNetYear.Show()
+    End Sub
+
+    Private Sub รายงานการการสงซอสนคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานการการสงซอสนคาToolStripMenuItem.Click
+        frmReportPurchase.Show()
+    End Sub
+
+    Private Sub รายงานการรบสนคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานการรบสนคาToolStripMenuItem.Click
+        reportResive.Show()
+    End Sub
 End Class
