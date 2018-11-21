@@ -43,7 +43,7 @@ Partial Class frmReportLowAmount
         Me.ClientSize = New System.Drawing.Size(584, 677)
         Me.Controls.Add(Me.ctrv1)
         Me.Name = "frmReportLowAmount"
-        Me.Text = "frmReportLowAmount"
+        Me.Text = "รายงานข้อมูลสินค้าต่ำกว่าจุดสั่งซื้อ"
         Me.ResumeLayout(False)
 
     End Sub

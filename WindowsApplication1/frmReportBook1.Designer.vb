@@ -43,7 +43,7 @@ Partial Class frmReportBook1
         Me.ClientSize = New System.Drawing.Size(509, 366)
         Me.Controls.Add(Me.ctrv4)
         Me.Name = "frmReportBook1"
-        Me.Text = "frmReportBook1"
+        Me.Text = "รายงานข้อมูลสินค้าทั้งหมด"
         Me.ResumeLayout(False)
 
     End Sub

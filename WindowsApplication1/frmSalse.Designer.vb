@@ -81,7 +81,7 @@ Partial Class frmSalse
         Me.lblSum.AutoSize = True
         Me.lblSum.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSum.ForeColor = System.Drawing.Color.Blue
-        Me.lblSum.Location = New System.Drawing.Point(661, 444)
+        Me.lblSum.Location = New System.Drawing.Point(643, 444)
         Me.lblSum.Name = "lblSum"
         Me.lblSum.Size = New System.Drawing.Size(67, 31)
         Me.lblSum.TabIndex = 45
@@ -221,7 +221,7 @@ Partial Class frmSalse
         Me.GroupBox1.Size = New System.Drawing.Size(468, 225)
         Me.GroupBox1.TabIndex = 35
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "รายละเอีดการสั่งซื่อ"
+        Me.GroupBox1.Text = "รายละเอีดการขาย"
         '
         'btnSearch
         '
@@ -413,7 +413,7 @@ Partial Class frmSalse
         Me.Controls.Add(Me.dgvBook)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmSalse"
-        Me.Text = "frmSalse"
+        Me.Text = "จัดการขายสินค้า"
         CType(Me.dgvSale, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvBook, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

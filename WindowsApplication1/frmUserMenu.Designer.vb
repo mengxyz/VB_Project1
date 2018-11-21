@@ -24,18 +24,18 @@ Partial Class frmUserMenu
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ขอมลพนฐานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ขอมลสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ขายสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.จบการทำงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานขอมลกคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานขอมลสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานขอมลการสงซอสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานขอมลการรบสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.จะดการขอมลสวนตวToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ขอมลหมวดหมสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ขอมลบรษทคคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ขอมลลกคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ขอมลสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ขายสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานขอมลกคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานขอมลสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานขอมลการสงซอสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานขอมลการรบสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.จบการทำงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,6 +55,30 @@ Partial Class frmUserMenu
         Me.ขอมลพนฐานToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.ขอมลพนฐานToolStripMenuItem.Text = "ข้อมูลพื้นฐาน"
         '
+        'จะดการขอมลสวนตวToolStripMenuItem
+        '
+        Me.จะดการขอมลสวนตวToolStripMenuItem.Name = "จะดการขอมลสวนตวToolStripMenuItem"
+        Me.จะดการขอมลสวนตวToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.จะดการขอมลสวนตวToolStripMenuItem.Text = "จัดการข้อมูลส่วนตัว"
+        '
+        'ขอมลหมวดหมสนคาToolStripMenuItem
+        '
+        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Name = "ขอมลหมวดหมสนคาToolStripMenuItem"
+        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Text = "ข้อมูลหมวดหมู่สินค้า"
+        '
+        'ขอมลบรษทคคาToolStripMenuItem
+        '
+        Me.ขอมลบรษทคคาToolStripMenuItem.Name = "ขอมลบรษทคคาToolStripMenuItem"
+        Me.ขอมลบรษทคคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ขอมลบรษทคคาToolStripMenuItem.Text = "ข้อมูลบริษัทคู่ค้า"
+        '
+        'ขอมลลกคาToolStripMenuItem
+        '
+        Me.ขอมลลกคาToolStripMenuItem.Name = "ขอมลลกคาToolStripMenuItem"
+        Me.ขอมลลกคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ขอมลลกคาToolStripMenuItem.Text = "ข้อมูลลูกค้า"
+        '
         'ขอมลสนคาToolStripMenuItem
         '
         Me.ขอมลสนคาToolStripMenuItem.Name = "ขอมลสนคาToolStripMenuItem"
@@ -73,12 +97,6 @@ Partial Class frmUserMenu
         Me.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem"
         Me.รายงานToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.รายงานToolStripMenuItem.Text = "รายงาน"
-        '
-        'จบการทำงานToolStripMenuItem
-        '
-        Me.จบการทำงานToolStripMenuItem.Name = "จบการทำงานToolStripMenuItem"
-        Me.จบการทำงานToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
-        Me.จบการทำงานToolStripMenuItem.Text = "จบการทำงาน"
         '
         'รายงานขอมลกคาToolStripMenuItem
         '
@@ -104,29 +122,11 @@ Partial Class frmUserMenu
         Me.รายงานขอมลการรบสนคาToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.รายงานขอมลการรบสนคาToolStripMenuItem.Text = "รายงานข้อมูลการรับสินค้า"
         '
-        'จะดการขอมลสวนตวToolStripMenuItem
+        'จบการทำงานToolStripMenuItem
         '
-        Me.จะดการขอมลสวนตวToolStripMenuItem.Name = "จะดการขอมลสวนตวToolStripMenuItem"
-        Me.จะดการขอมลสวนตวToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.จะดการขอมลสวนตวToolStripMenuItem.Text = "จัดการข้อมูลส่วนตัว"
-        '
-        'ขอมลหมวดหมสนคาToolStripMenuItem
-        '
-        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Name = "ขอมลหมวดหมสนคาToolStripMenuItem"
-        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.ขอมลหมวดหมสนคาToolStripMenuItem.Text = "ข้อมูลหมวดหมู่สินค้า"
-        '
-        'ขอมลบรษทคคาToolStripMenuItem
-        '
-        Me.ขอมลบรษทคคาToolStripMenuItem.Name = "ขอมลบรษทคคาToolStripMenuItem"
-        Me.ขอมลบรษทคคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.ขอมลบรษทคคาToolStripMenuItem.Text = "ข้อมูลบริษัทคู่ค้า"
-        '
-        'ขอมลลกคาToolStripMenuItem
-        '
-        Me.ขอมลลกคาToolStripMenuItem.Name = "ขอมลลกคาToolStripMenuItem"
-        Me.ขอมลลกคาToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.ขอมลลกคาToolStripMenuItem.Text = "ข้อมูลลูกค้า"
+        Me.จบการทำงานToolStripMenuItem.Name = "จบการทำงานToolStripMenuItem"
+        Me.จบการทำงานToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
+        Me.จบการทำงานToolStripMenuItem.Text = "จบการทำงาน"
         '
         'frmUserMenu
         '

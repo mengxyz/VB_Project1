@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub รายงานขอมลการสงซอสนคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานขอมลการสงซอสนคาToolStripMenuItem.Click
-
+        frmReportPurchase.Show()
     End Sub
 
     Private Sub ขายสนคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ขายสนคาToolStripMenuItem.Click
@@ -39,5 +39,9 @@
 
     Private Sub ขอมลลกคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ขอมลลกคาToolStripMenuItem.Click
         frmMember.Show()
+    End Sub
+
+    Private Sub รายงานขอมลการรบสนคาToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานขอมลการรบสนคาToolStripMenuItem.Click
+        frmRecieve.Show()
     End Sub
 End Class

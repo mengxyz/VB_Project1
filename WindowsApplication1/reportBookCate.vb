@@ -35,5 +35,6 @@ Public Class frmreportBookCate
         TbCtr.Load(sqlDr)
         currentReport.SetDataSource(TbCtr)
         ctrv1.ReportSource = currentReport
+        currentReport.SetParameterValue("Pa_NAME", cmbPa.Text)
     End Sub
 End Class

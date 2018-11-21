@@ -97,7 +97,7 @@ Partial Class frmreportBookCate
         Me.ClientSize = New System.Drawing.Size(744, 671)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "frmreportBookCate"
-        Me.Text = "reportBookCate"
+        Me.Text = "รายงานข้อมูลสินค้าทั้งหมดตามหมวดหมู่"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)

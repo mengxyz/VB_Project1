@@ -3,26 +3,41 @@ Imports System.Data.SqlClient
 Public Class frmReportPurchase
 
     Private Sub frmReportPurchase_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Module1.Connect()
-        Dim sql As String = "select p.P_ID ,p.P_Date,pa.Pa_Na,e.E_Name,p.P_Status ,pu.P_Num,pu.P_Total from Purchase p,Employee e,Partner pa,Purchase_Detail pu where p.P_ID = pu.P_ID And p.Pa_ID = pa.Pa_ID And p.E_Username = e.E_Username"
-        Dim sqCmd As New SqlCommand(sql, Conn)
-        Dim sqlDr As SqlDataReader = sqCmd.ExecuteReader
-        Dim TbCtr As New DataTable
-        Conn.Close()
+        Dim sql As String
+        Dim da As SqlDataAdapter
         Dim ds As New DataSet
-        Dim da As New SqlDataAdapter(sql, Conn)
-        da.Fill(ds, "purchase")
-        For i As Integer = 0 To ds.Tables("purchase").Rows.Count - 1
-            If ds.Tables("purchase").Rows(i).Item(4) = 0 Then
-                ds.Tables("purchase").Rows(i).Item(4) = "ยังไม่ได้รับ"
-            Else
-                ds.Tables("purchase").Rows(i).Item(4) = "ได้รับแล้ว"
-            End If
-        Next
-        Dim currentreport As New ctrReportPurchase
-        TbCtr.Load(sqlDr)
-        currentreport.SetDataSource(ds.Tables("purchase"))
-        ctrv1.ReportSource = currentreport
 
+        Module1.Connect()
+        sql = "SELECT P_ID FROM Purchase ORDER BY P_ID"
+
+        da = New SqlDataAdapter(sql, Conn) 'ประมวลผลคำสั่ง sql ด้วย sqlDataAdapter
+        da.Fill(ds, "Recive")  'เอาข้อมูลใส่ใน dataset โดยใส่ไว้ใน datatable ที่ชื่อว่า Category
+        If ds.Tables("Recive").Rows.Count <> 0 Then  'ตรวจสอบ จำนวนแถวใน Category ไม่เท่ากับ 0 ให้เข้าไปทำในตาราง Category
+            cmbPurchase.DataSource = ds.Tables("Recive") 'ผูก dataset กับ cmbCate
+            cmbPurchase.ValueMember = "P_ID"    'กำหนดค่าที่เก็บจากการเลือก
+            'cmdText.DisplayMember = "C_Na"  'กำหนดค่าที่แสดง
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim sql As String
+        Dim sqlDr As SqlDataReader
+        Dim sqlCmd As SqlCommand
+        Dim TbCtr As DataTable
+        Dim currentReport As New ctrReportPurchase
+        Module1.Connect()
+        sql = "select Purchase.P_ID, Purchase.P_Date ,Partner.Pa_Na ,Partner.Pa_Add ,Partner.Pa_Tel ,Purchase.P_Net,Employee.E_Name,Book.B_ISBN,Book.B_Na,Purchase_Detail.P_Price,Purchase_Detail.P_Num,Purchase_Detail.P_Total from Purchase,Partner,Employee,Book,Purchase_Detail where Purchase.P_ID = '" & cmbPurchase.SelectedValue & "' and Purchase.P_ID = Purchase_Detail.P_ID and Book.B_ISBN = Purchase_Detail.B_ISBN and Purchase.Pa_ID = Partner.Pa_ID and Purchase.E_Username = Employee.E_Username"
+        ' sql &= "from Perchase,Partner,Employee,Book,Purchase_Detail"
+        '  sql &= "where Perchase.P_ID = '" & frmPurchase.txtID.Text & "'"
+        ' sql &= "and Perchase.P_ID = Purchase_Detail.P_ID "
+        '  sql &= "and Book.B_ISBN = Purchase_Detail.B_ISBN "
+        '  sql &= "and Perchase.Pa_ID = Partner.Pa_ID "
+        '  sql &= "and Perchase.E_Username = Employee.E_Username"
+        sqlCmd = New SqlCommand(sql, Conn)
+        sqlDr = sqlCmd.ExecuteReader
+        TbCtr = New DataTable
+        TbCtr.Load(sqlDr)
+        currentReport.SetDataSource(TbCtr)
+        ctrv1.ReportSource = currentReport
     End Sub
 End Class

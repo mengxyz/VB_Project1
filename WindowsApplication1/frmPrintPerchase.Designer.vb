@@ -43,7 +43,7 @@ Partial Class frmPrintPerchase
         Me.ClientSize = New System.Drawing.Size(506, 367)
         Me.Controls.Add(Me.ctrv2)
         Me.Name = "frmPrintPerchase"
-        Me.Text = "frmP"
+        Me.Text = "พิมพ์ใบสั่งซื้อ"
         Me.ResumeLayout(False)
 
     End Sub

@@ -43,7 +43,7 @@ Partial Class frmPrintSale
         Me.ClientSize = New System.Drawing.Size(635, 451)
         Me.Controls.Add(Me.ctrv3)
         Me.Name = "frmPrintSale"
-        Me.Text = "frmPrintSale"
+        Me.Text = "พิมพ์ใบซื้อขายสินค้า"
         Me.ResumeLayout(False)
 
     End Sub

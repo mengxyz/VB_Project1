@@ -27,6 +27,7 @@ Partial Class frmReportSaleDay
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmbDate = New System.Windows.Forms.ComboBox()
         Me.ctrv1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -42,6 +43,7 @@ Partial Class frmReportSaleDay
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.cmbDate)
@@ -90,6 +92,15 @@ Partial Class frmReportSaleDay
         Me.ctrv1.Size = New System.Drawing.Size(620, 488)
         Me.ctrv1.TabIndex = 0
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(481, 36)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "ตกลง"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmReportSaleDay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -111,4 +122,5 @@ Partial Class frmReportSaleDay
     Friend WithEvents cmbDate As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

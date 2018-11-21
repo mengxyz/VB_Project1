@@ -198,7 +198,7 @@ Partial Class frmRecieve
         Me.Controls.Add(Me.btnCancle)
         Me.Controls.Add(Me.btnSave)
         Me.Name = "frmRecieve"
-        Me.Text = "frmRecive"
+        Me.Text = "จัดการการรับสินค้า"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvDetail, System.ComponentModel.ISupportInitialize).EndInit()

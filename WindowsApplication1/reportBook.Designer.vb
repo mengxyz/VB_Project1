@@ -23,10 +23,10 @@ Partial Class frmReportPaBook
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.cmbPa = New System.Windows.Forms.ComboBox()
         Me.ctrv6 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -52,6 +52,15 @@ Partial Class frmReportPaBook
         Me.SplitContainer1.Size = New System.Drawing.Size(666, 420)
         Me.SplitContainer1.SplitterDistance = 106
         Me.SplitContainer1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(147, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "บริษัท"
         '
         'btnOK
         '
@@ -81,15 +90,6 @@ Partial Class frmReportPaBook
         Me.ctrv6.Size = New System.Drawing.Size(666, 310)
         Me.ctrv6.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(147, 35)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "บริษัท"
-        '
         'frmReportPaBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -97,7 +97,7 @@ Partial Class frmReportPaBook
         Me.ClientSize = New System.Drawing.Size(666, 420)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "frmReportPaBook"
-        Me.Text = "reportBook"
+        Me.Text = "รายงานข้อมูลสินค้าทั้งหมดตามบริษัทคู่ค้า"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)

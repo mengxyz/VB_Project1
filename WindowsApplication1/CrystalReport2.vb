@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class ctrBookCate
+Public Class CrystalReport2
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class ctrBookCate
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "ctrBookCate.rpt"
+            Return "CrystalReport2.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class ctrBookCate
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "WindowsApplication1.ctrBookCate.rpt"
+            Return "WindowsApplication1.CrystalReport2.rpt"
         End Get
         Set
             'Do nothing
@@ -91,18 +91,10 @@ Public Class ctrBookCate
             Return Me.ReportDefinition.Sections(4)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Pa_NAME() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(0)
-        End Get
-    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedctrBookCate
+Public Class CachedCrystalReport2
     Inherits Component
     Implements ICachedReport
     
@@ -144,7 +136,7 @@ Public Class CachedctrBookCate
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As ctrBookCate = New ctrBookCate()
+        Dim rpt As CrystalReport2 = New CrystalReport2()
         rpt.Site = Me.Site
         Return rpt
     End Function
